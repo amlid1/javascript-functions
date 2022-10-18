@@ -1,6 +1,17 @@
-function seed() {}
+function seed(args) {
+  const seedArr = [...arguments]
+  return seedArr;
+}
 
-function same([x, y], [j, k]) {}
+function same([x, y], [j, k]) {
+  const firstCell = arguments[0].join(", ");
+  const secondCell = arguments[1].join(", ");
+  if (firstCell === secondCell) {
+      return true;
+  } else {
+      return false;
+  }
+}
 
 // The game state to search for `cell` is passed as the `this` value of the function.
 function contains(cell) {}
